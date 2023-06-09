@@ -14,6 +14,6 @@
         python demo_smile.py 
 
 - Videos/ Visualization of experiment results. You can also see visualization of our experiments on YouTube. 
-    - [SVGD with and without normalization](https://youtu.be/JOkWak1ewDE).
-    - [Transporting particles in two-moons posterior space](https://youtu.be/9YdEr2HqHMw).
+    - [![SVGD with and without normalization](https://img.youtube.com/vi/JOkWak1ewDE/maxresdefault.jpg)](https://youtu.be/JOkWak1ewDE)
+    - [![Transporting particles in two-moons posterior space](https://img.youtube.com/vi/9YdEr2HqHMw/maxresdefault.jpg)](https://youtu.be/9YdEr2HqHMw).
 
