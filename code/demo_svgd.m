@@ -1,5 +1,5 @@
 clear
-addpath("matlab\");
+addpath("matlab");
 
 %%
 % problem set up
