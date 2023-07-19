@@ -34,7 +34,6 @@ def plot_norm_contour(mu, sigma, c = 'r'):
     # Create the contour plot
     plt.contour(X, Y, Z, levels=10, colors = c, alpha = 0.5)
 
-    plt.title('Scatter plot overlaid with contour plot')
     plt.xlabel('X')
     plt.ylabel('Y')
 
