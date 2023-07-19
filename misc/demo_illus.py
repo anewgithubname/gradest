@@ -1,11 +1,13 @@
 # %%
 
 import torch
+device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+# device = torch.device("cpu")
+torch.set_default_device(device)
 
 from core.torchGradFlow import infer_cv, plot_norm_contour
 from core.util import comp_median
 from torch import ones, zeros, eye
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 # %%
 from torch.distributions.multivariate_normal import MultivariateNormal as MVN
@@ -49,7 +51,7 @@ grad = infer_cv(x0, Xp, Xq, sigma_list=sigma_list)
 
 # %%
 # generate a grid [-5, 5]
-plt.figure(figsize=(5, 5))
+plt.figure(figsize=(10, 10))
 plot_norm_contour(mu.cpu(), covar.cpu())
 plot_norm_contour(zeros(d).cpu(), eye(d).cpu(), 'b')
 plt.title("red: p, blue q, green: estimated grad, red: true gradient")

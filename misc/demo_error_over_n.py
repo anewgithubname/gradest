@@ -1,6 +1,9 @@
 # %%
 
 import torch
+device = torch.device("cuda:0" if torch.device else "cpu")
+# device = torch.device("cpu")
+torch.set_default_device(device)
 
 from IPython import display
 
@@ -8,8 +11,7 @@ from core.torchGradFlow import infer_cv
 from core.nn import NPNet
 from core.util import comp_median
 from torch import ones, zeros, eye
-device = torch.device("cuda:0" if torch.device else "cpu")
-# device = torch.device("cpu")
+
 # %%
 from torch.distributions.multivariate_normal import MultivariateNormal as MVN
 import numpy as np

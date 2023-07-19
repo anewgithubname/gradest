@@ -6,8 +6,6 @@ from torch import optim
 
 from core.util import comp_median, kernel_comp
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-# device = torch.device("cpu")
 import numpy as np
 
 # %%
@@ -42,7 +40,7 @@ def plot_norm_contour(mu, sigma, c = 'r'):
 
 # estimate gradient of log r(x) w.r.t. x using sigma
 def gradest(x0, xp, xq, sigma):
-    net = NPNet(torch.zeros(x0.shape[0], x0.shape[1]+1, device=device))
+    net = NPNet(torch.zeros(x0.shape[0], x0.shape[1]+1))
     optimizer = optim.Adagrad(net.parameters(), lr=1e-1)
     
     kp0 = kernel_comp(xp, x0, sigma) 
