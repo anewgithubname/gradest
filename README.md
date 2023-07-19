@@ -17,3 +17,5 @@
     - [![SVGD with and without normalization](https://img.youtube.com/vi/JOkWak1ewDE/maxresdefault.jpg)](https://youtu.be/JOkWak1ewDE)
     - [![Transporting particles in two-moons posterior space](https://img.youtube.com/vi/9YdEr2HqHMw/maxresdefault.jpg)](https://youtu.be/9YdEr2HqHMw)
 
+- Check out ```/misc``` where some toy examples are provided. 
+  - ![](illus.png)
