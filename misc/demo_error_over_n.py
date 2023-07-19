@@ -64,6 +64,9 @@ error_over_n = np.load(f'error_over_n_{mu[0]}.npy')
 # plot errorbar for each n
 plt.errorbar([500, 1000, 2500, 5000], np.mean(error_over_n, 1), yerr=np.std(error_over_n, 1), fmt='-o')
 
+plt.xlabel('n')
+plt.ylabel('MSE')
+
 print(np.mean(error_over_n, 1))
 print(np.std(error_over_n, 1))
 # %%
