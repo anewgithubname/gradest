@@ -6,7 +6,7 @@ https://arxiv.org/abs/2305.15577
 ## Folder Structure
 - ```/misc``` where some toy examples are provided. 
   - run ```demo_illus.py```
-  - ![](illus.png)
+  - ![](p1.png)
 - ```code/```: the code to reproduce our experiments. 
   - Our code requires ```pytorch```, ```sbibm```, MATLAB and its python engine (```python -m pip install matlabengine```)
   - to see SVGD with and without normalization, open matlab and run ```demo_svgd.m```
