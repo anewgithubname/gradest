@@ -1,7 +1,7 @@
 # %%
 import torch
 from core.loss import loss as klloss
-from core.nn import NPNet, CNNDiscNet
+from core.nn import NPNet
 from torch import optim
 
 from core.util import comp_median, kernel_comp
