@@ -28,7 +28,7 @@ def infer(xp, xq, x):
     start = time.perf_counter()
     libc.GF(xp.ravel('F'), xq.ravel('F'), x.ravel('F'), np, nq, n, d, grad)
     end = time.perf_counter()
-    print(f"execution time: {end-start: 0.4f} seconds")
+    # print(f"execution time: {end-start: 0.4f} seconds")
 
     grad = grad.reshape((n,d), order='F')
     

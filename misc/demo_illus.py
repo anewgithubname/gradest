@@ -19,7 +19,6 @@ def infer_cpp(Xp, Xq, X):
 from torch.distributions.multivariate_normal import MultivariateNormal as MVN
 import numpy as np
 
-err = []
 d = 2
 mup = zeros(d, device=device)
 covarp = eye(d, device=device)
@@ -53,7 +52,7 @@ print("estimation error:", torch.mean(torch.sum((grad - grad_logrq)**2,1)).item(
 # %%
 import matplotlib.pyplot as plt
 
-# generate a grid [-5, 5]
+# generate a grid [-2, 2]
 x = torch.linspace(-2, 2, 20)
 y = torch.linspace(-2, 2, 20)
 x0 = torch.stack(torch.meshgrid(x, y), dim=-1).reshape(-1, 2).to(device)
@@ -62,7 +61,7 @@ x0 = torch.stack(torch.meshgrid(x, y), dim=-1).reshape(-1, 2).to(device)
 grad = infer_cpp(Xp, Xq, x0)
 
 # %%
-# generate a grid [-5, 5]
+
 plt.figure(figsize=(5, 5))
 plot_norm_contour(mup.cpu(), covarp.cpu())
 plot_norm_contour(muq.cpu(), covarq.cpu(), 'b')
