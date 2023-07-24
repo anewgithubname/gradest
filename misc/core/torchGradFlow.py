@@ -16,8 +16,8 @@ def plot_norm_contour(mu, sigma, c = 'r'):
     from scipy.stats import multivariate_normal
 
     # Create a grid of points on which to evaluate the distribution
-    x = linspace(mu[0] - 3*sigma[0,0], mu[0] + 3*sigma[0,0], 100)
-    y = linspace(mu[1] - 3*sigma[1,1], mu[1] + 3*sigma[1,1], 100)
+    x = linspace(mu[0] - 10*sigma[0,0], mu[0] + 10*sigma[0,0], 100)
+    y = linspace(mu[1] - 10*sigma[1,1], mu[1] + 10*sigma[1,1], 100)
     X, Y = meshgrid(x, y)
 
     # Create a 2D standard normal distribution with mean mu and standard deviation sigma
@@ -30,7 +30,7 @@ def plot_norm_contour(mu, sigma, c = 'r'):
     Z = rv.pdf(pos)
 
     # Create the contour plot
-    plt.contour(X, Y, Z, levels=10, colors = c, alpha = 0.5)
+    plt.contour(X, Y, Z, levels=5, colors = c, alpha = 1)
 
     plt.xlabel('X')
     plt.ylabel('Y')

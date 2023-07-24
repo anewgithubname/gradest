@@ -1,2 +1,9 @@
 *.pyc
 *.npy
+*.pt
+bak/
+misc/figs
+
+_*.py
+_*.ipynb
+*checkpoints*

@@ -20,13 +20,13 @@ from torch.distributions.multivariate_normal import MultivariateNormal as MVN
 import numpy as np
 
 d = 2
-mup = zeros(d, device=device)
-covarp = eye(d, device=device)
+mup = zeros(d, device=device) + 1
+covarp = eye(d, device=device)*.65
 
 muq = zeros(d, device=device)
-covarq = eye(d, device=device)*2
+covarq = eye(d, device=device)
 
-n = 10000
+n = 2000
 
 # %%
 
